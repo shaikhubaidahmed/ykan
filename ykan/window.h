@@ -7,6 +7,7 @@
 GLFWwindow* window;
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
+VkInstance instance;
 //Window
 
 //create window
@@ -21,9 +22,44 @@ void initWindow(){
 }
 
 
+//the VkInstance
+void createInstance() {
+    VkApplicationInfo appInfo{};
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "app";
+    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.pEngineName = "Ykan";
+    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.apiVersion = VK_API_VERSION_1_0;
+
+    VkInstanceCreateInfo createInfo{};
+    createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    createInfo.pApplicationInfo = &appInfo;
+
+    uint32_t glfwExtensionCount = 0;
+    const char** glfwExtensions;
+
+    glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+
+    createInfo.enabledExtensionCount = glfwExtensionCount;
+    createInfo.ppEnabledExtensionNames = glfwExtensions;
+    createInfo.enabledLayerCount = 0;
+
+    VkResult result = vkCreateInstance(&createInfo, NULL, &instance);
+
+    if (vkCreateInstance(&createInfo, NULL, &instance) != VK_SUCCESS) {
+    printf("failed to create instance!\n");
+    }
+
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(NULL, &extensionCount, NULL);
+}
+
 //Init vulkan and create window
 void init(){
   printf("init\n");
+
+  createInstance();
 }
 
 //main loop
