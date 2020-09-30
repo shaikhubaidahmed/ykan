@@ -73,13 +73,3 @@ void clean(){
   glfwTerminate();
   printf("cleaned\n");
 }
-
-
-
-//run the program
-void run(){
-  initWindow();
-  init();
-  update();
-  clean();
-}

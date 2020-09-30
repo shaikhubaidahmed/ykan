@@ -1,4 +1,4 @@
-#include "window.h"
+#include "ykan.h"
 
 int main(int argc, char const *argv[]) {
 
