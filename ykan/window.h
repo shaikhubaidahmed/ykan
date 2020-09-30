@@ -24,7 +24,7 @@ void initWindow(){
 
 //the VkInstance
 void createInstance() {
-    VkApplicationInfo appInfo{};
+    VkApplicationInfo appInfo;
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = "app";
     appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
@@ -32,7 +32,7 @@ void createInstance() {
     appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
     appInfo.apiVersion = VK_API_VERSION_1_0;
 
-    VkInstanceCreateInfo createInfo{};
+    VkInstanceCreateInfo createInfo;
     createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     createInfo.pApplicationInfo = &appInfo;
 
@@ -53,6 +53,12 @@ void createInstance() {
 
     uint32_t extensionCount = 0;
     vkEnumerateInstanceExtensionProperties(NULL, &extensionCount, NULL);
+
+    printf("available extensions:\n");
+
+    for (const auto& extension : extensions) {
+        printf("\t %s \n",extension.extensionName);
+}
 }
 
 //Init vulkan and create window
