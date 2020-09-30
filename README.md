@@ -7,8 +7,13 @@ with vulkan's long setup process.
 ##what ykan has
 
 **done**
+
+
 * window creation
+
 **todo**
+
+
 * vk init
 * suport for android and vr
 * raytracing
