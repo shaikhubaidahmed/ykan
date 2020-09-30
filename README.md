@@ -7,8 +7,13 @@ with vulkan's long setup process.
 ##what ykan has
 
 **done**
+
+
 * window creation
+
 **todo**
+
+
 * vk init
 * suport for android and vr
 * raytracing
@@ -82,6 +87,10 @@ int main(int argc, char const *argv[]) {
 please help me make this engine
 if you find some speling mistakes or you want to
 hel m with the engine development contact me
+
+
 twitter @arydev_7
+
 telegram @arydev
+
 email arydev7@gmail.com
