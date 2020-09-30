@@ -45,7 +45,11 @@ void createInstance() {
 
   createInfo.enabledLayerCount = 0;
 
-  if (vkCreateInstance(&createInfo, NULL, &instance) != VK_SUCCESS) {
+  int instResult=vkCreateInstance(&createInfo, NULL, &instance);
+
+  printf("%s\n",instResult);
+
+  if (instResult != VK_SUCCESS) {
       printf("failed to create instance!\n");}
 }
 
