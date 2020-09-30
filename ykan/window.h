@@ -56,9 +56,9 @@ void createInstance() {
 
     printf("available extensions:\n");
 
-    for (const auto& extension : extensions) {
-        printf("\t %s \n",extension.extensionName);
-}
+    if (vkCreateInstance(&createInfo, NULL, &instance) != VK_SUCCESS) {
+                printf("failed to create instance!\n");
+            }
 }
 
 //Init vulkan and create window

@@ -1,2 +1,2 @@
-gcc main.c -lglfw -o app
+gcc main.c -lglfw -lvulkan -o app
 ./app
