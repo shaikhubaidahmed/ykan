@@ -1,7 +1,7 @@
 # ykan
 
-**YKAN** is a game engine writen in c for game and graphichs development
-it makes it easy to write *Vulkan* apps easyer without needing to strugle
+**YKAN** is a game engine writTen in c for game and graphics development
+it makes it easy to write *Vulkan* apps easier without needing to struggle
 with vulkan's long setup process.
 
 ##what ykan has
@@ -39,9 +39,9 @@ with vulkan's long setup process.
 To make a ykan project you need to setup some things.
 
 1. install YKAN
-2. insatll glfw3
+2. install glfw3
 
-now let's grt to the code (note this code i written in c but ykan for the reason
+now let's go to the code (note this code i written in c but ykan for the reason
 that is made in c libs that make other languages use ykan are easy to make)
 
 ```c
@@ -85,8 +85,8 @@ int main(int argc, char const *argv[]) {
 
 ## this project is open source
 please help me make this engine
-if you find some speling mistakes or you want to
-hel m with the engine development contact me
+if you find some spelling mistakes or you want to
+help me with the engine development contact me
 
 
 twitter @arydev_7
