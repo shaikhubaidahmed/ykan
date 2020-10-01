@@ -41,7 +41,7 @@ To make a ykan project you need to setup some things.
 1. install YKAN
 2. install glfw3
 
-now let's go to the code (note this code i written in c but ykan for the reason
+now let's go to the code (note this code is written in c but ykan for the reason
 that is made in c libs that make other languages use ykan are easy to make)
 
 ```c
